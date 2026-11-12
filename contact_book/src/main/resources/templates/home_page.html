@@ -1,10 +1,36 @@
+
 <!DOCTYPE html>
-<html xmlns:th="http://thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
+
 <head>
+    <meta charset="UTF-8">
     <title>Contact Book</title>
 </head>
+
 <body>
-    <h1 th:text="${contact.name} + '\'s Contact Book'" />
-        <p>This is a static web page served by Spring Boot. We will create our contact book on this web page</p>
+
+    <h1>My Contact Book</h1>
+
+    <p>Welcome to your contact book!</p>
+
+    <h2>My Contacts</h2>
+
+    <a th:href="@{/add-contact}">
+        <button type="button">Add New Contact</button>
+    </a>
+
+    <ul>
+
+        <li th:each="contact : ${contacts}">
+
+            <a th:href="@{/contacts/{id}(id=${contact.id})}"
+               th:text="${contact.fullName}">
+            </a>
+
+        </li>
+
+    </ul>
+
 </body>
-</html> 
+
+</html>
