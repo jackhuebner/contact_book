@@ -4,16 +4,32 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Contact Book</title>
+    <head>
+<link rel="stylesheet" type="text/css" href = "home_page-stylesheet.css">
 </head>
 
-<body>
+<body style = "background-color: lightyellow;">
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="toggle">
+    <span class = "top_line common"></span>
+    <span class = "mid_line common"></span>
+    <span class = "bottom_line common"></span>
+  </label>
 
+<div class="sidenav">
+  <h1> MENU </h1>
+  <a href="#">My Contacts</a>
+  <a href="#">Favorites</a>
+  <a href="#">Settings</a>
+</div>
+
+<div class="main">
     <h1>My Contact Book</h1>
 
     <p>Welcome to your contact book!</p>
 
     <h2>My Contacts</h2>
+  <input type = "checkbox">
 
     <a th:href="@{/add-contact}">
         <button type="button">Add New Contact</button>
@@ -30,7 +46,7 @@
         </li>
 
     </ul>
-
+</div>
 </body>
 
 </html>
