@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Average+Sans&display=swap');
+
+
+*{
+    font-family: 'Average Sans'
+}
+body {
+
+}
+
+.image-container{   
+    width:120px;    
+    height:120px;
+    border-radius:50%;
+    border:3px dashed rgba(0, 0, 0, 0.1);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    overflow:hidden;
+}
+
+.image-container:hover{
+    border-color:#fff;
+    transform: scale(1.03);
+}
+
+.image-container span{
+    font-size:14px;
+    opacity:.9;
+}
+
+.image-container img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:none;
+}

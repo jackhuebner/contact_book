@@ -43,7 +43,7 @@ padding-left:60px;
   padding: 0px 10px;
 }
 
-input{
+#menu-toggle{
     display:none;
     visibility: hidden;
     appearance:none;
@@ -111,4 +111,50 @@ input:checked ~ .sidenav{
     transform: translateX(0);
     box-shadow:0 0 15px rgba(0,0,0,0.3);
 
+}
+
+.search{
+    width:330px;
+    display:flex;
+    align-items:center;
+    padding: 8px;
+    border-radius: 28px;
+    background: #f6f6f6;
+    border: 1px solid black; 
+}
+
+.search-input{
+    width: 100%;
+    font-size:18px;
+    margin-left:8px;
+    outline:none;
+    border: none;
+    background:transparent;
+}
+
+.filter {
+    padding: 8px;
+    background: #f6f6f6;
+    border: 1px solid black; 
+    border-radius: 28px;
+    font-size:16px;
+}
+
+button{
+    border-radius: 28px;
+    padding: 8px;
+    border: 1px solid black;
+    cursor:pointer;
+}
+
+.contact {
+    display:flex;
+    width:300px;
+    padding: 8px;
+    align-items: center;
+    background: #f6f6f6;
+    border: 1px solid black; 
+    border-radius: 28px;
+    font-size:16px;
+    cursor:pointer;
 }

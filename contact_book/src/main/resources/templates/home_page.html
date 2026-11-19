@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <head>
 <link rel="stylesheet" type="text/css" href = "home_page-stylesheet.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=call" />
 </head>
 
 <body style = "background-color: lightyellow;">
@@ -25,26 +25,41 @@
 
 <div class="main">
     <h1>My Contact Book</h1>
-
+  
     <p>Welcome to your contact book!</p>
 
-    <h2>My Contacts</h2>
-  <input type = "checkbox">
-
-    <a th:href="@{/add-contact}">
+    <div style=" display:flex; align-items: center; gap:15px; margin-bottom:15px;">
+    <h2 style = "margin: 0">My Contacts</h2>
+      <a th:href="@{/add-contact}">
         <button type="button">Add New Contact</button>
-    </a>
+      </a>
+    </div>
 
-    <ul>
 
-        <li th:each="contact : ${contacts}">
 
-            <a th:href="@{/contacts/{id}(id=${contact.id})}"
+    <form>
+      <div class="search">
+          <input class="search-input" type="search" placeholder ="Search contact...">
+      </div>
+    </form>
+    <div style=" display:flex; align-items: center; gap:15px; margin-top: 15px;" >
+      <button class="filter">All Contacts</button>
+      <button class="filter">Favorites</button>
+    </div>
+
+
+    <ul style = "list-style-type:none; padding:0;">
+
+        <li class = "contact" th:each="contact : ${contacts}" style="margin-bottom:10px">
+          <div> 
+          <a th:href="@{/contacts/{id}(id=${contact.id})}"
                th:text="${contact.fullName}">
             </a>
+          <div th:text="${contact.phoneNumber}"></div>
+          </div>
+          <span class="material-symbols-outlined" style = "margin-left:auto; padding-right:10px">call</span>          
 
-        </li>
-
+      </li>
     </ul>
 </div>
 </body>
