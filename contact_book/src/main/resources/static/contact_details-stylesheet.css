@@ -5,7 +5,9 @@
     font-family: 'Average Sans'
 }
 body {
-
+    display: flex;
+    justify-content: center;   /* centers horizontally */
+    align-items: center;    /* keeps normal vertical flow */
 }
 
 .image-container{   

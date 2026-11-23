@@ -5,6 +5,9 @@
     font-family: 'Average Sans'
 }
 body {
+    display: flex;
+    justify-content: center;   /* centers horizontally */
+    align-items: center;    /* keeps normal vertical flow */
 }
 
 .sidenav {
@@ -38,9 +41,7 @@ padding-left:60px;
 }
 
 .main {
-  margin-left: 180px; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
 }
 
 #menu-toggle{
@@ -55,7 +56,9 @@ padding-left:60px;
     cursor: pointer;
     height:30px;
     width:30px;
-    z-index:2;
+    top:20px;
+    left:20px;
+    z-index:1000;
     background-color:lightyellow;
     box-shadow:0 0 10px rgba(0,0,0,0.3);
 }

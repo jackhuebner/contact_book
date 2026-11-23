@@ -4,11 +4,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Contact Book</title>
+    <link rel="stylesheet"
+          th:href="@{/contact_form-stylesheet.css}">
+              <title>Contact Form</title>
 </head>
 
 <body style = "background-color: lightyellow;">
-       
+<div>
     <h1 th:text="${formTitle}">Contact Form</h1>
 
     <form th:action="${formAction}" th:object="${contact}" method="post">
@@ -58,6 +60,7 @@
     <br>
 
     <a th:href="@{/}">Back to Contacts</a>
+</div>
 
 </body>
 

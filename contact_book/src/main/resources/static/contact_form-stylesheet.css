@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Average+Sans&display=swap');
+
+
+*{
+    font-family: 'Average Sans'
+}
+body {
+    display: flex;
+    justify-content: center;   /* centers horizontally */
+    align-items: center;    /* keeps normal vertical flow */
+}
