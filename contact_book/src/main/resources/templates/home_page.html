@@ -50,12 +50,15 @@
     <ul style = "list-style-type:none; padding:0;">
 
         <li class = "contact" th:each="contact : ${contacts}" style="margin-bottom:10px">
-          <div> 
-          <a th:href="@{/contacts/{id}(id=${contact.id})}"
-               th:text="${contact.fullName}">
+          <div style = " display:flex; align-items:center;"> 
+          <div th:text="${contact.phoneNumber}"></div>
+          <div class = "image-container" >
+          <img th:src="${contact.profilePic}"></img>
+          </div>
+            <a th:href="@{/contacts/{id}(id=${contact.id})}"
+               th:text="${contact.fullName}"
+               style = "padding-left: 20px;">
             </a>
-          <div th:text="${contact.phoneNumber}"></div>
-          <div th:text="${contact.phoneNumber}"></div>
           </div>
           <span class="material-symbols-outlined" style = "margin-left:auto; padding-right:10px">call</span>          
 

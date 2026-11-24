@@ -19,9 +19,9 @@ public class WebController {
     private Long nextId = 1L;
 
     public WebController() {
-        contacts.add(new Contact(nextId++, "Jack", "Smith"));
-        contacts.add(new Contact(nextId++, "John", "Doe"));
-        contacts.add(new Contact(nextId++, "Sarah", "Johnson"));
+        contacts.add(new Contact(nextId++, "Jack", "Smith", "jackhuebnerimage.jpeg"));
+        contacts.add(new Contact(nextId++, "John", "Doe", "johndoeimage.webp"));
+        contacts.add(new Contact(nextId++, "Sarah", "Johnson", "sarahjohnsonimage.webp"));
     }
 
     // Display all contacts
@@ -100,6 +100,7 @@ public class WebController {
             return "redirect:/";
         }
 
+        existingContact.setProfilePic(updatedContact.getProfilePic());
         existingContact.setFirstName(updatedContact.getFirstName());
         existingContact.setLastName(updatedContact.getLastName());
         existingContact.setPhoneNumber(updatedContact.getPhoneNumber());

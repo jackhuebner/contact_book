@@ -15,10 +15,11 @@ public class Contact {
     public Contact() {
     }
 
-    public Contact(Long id, String firstName, String lastName) {
+    public Contact(Long id, String firstName, String lastName, String profilePic) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.profilePic = profilePic;
     }
 
     public Long getId() {
